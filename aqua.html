@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MARCHICA AQUARIUM</title>
+<link rel="stylesheet" type="text/css" href="forum.html">
+<link rel="stylesheet" type="text/css" href="adminpage.html">
+<link rel="stylesheet" type="text/css" href="login.html">
+<link rel="stylesheet" type="text/css" href="viewer.css">
+<link rel="stylesheet" type="text/css" href="viewer.html">
+<link rel="stylesheet" type="text/css" href="viewer.js">
+<link rel="stylesheet" type="text/css" href="gettrack.php">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link rel="shortcut icon" type="image/x-icon" href="icon.png">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <meta charset="utf-8">
+
+        <meta name="google-site-verification" content="wNzEcM-MuvKpUcHEzhtdazbUsnF1Uq978l-Edv5hDK4" />
+
+        <meta name="yandex-verification" content="2405f1e30e6334b5" />
+
+        <meta name="theme-color" content="#07CFD4">
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+html{
+      scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.icon{
+    cursor: pointer;
+}
+
+nav{
+    width: 100%;
+    height: 55px;
+    background: #fff;
+    box-shadow: 0 0 10px #0009;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    z-index: 200;
+}
+
+nav .icon{
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .logo{
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0 20px;
+}
+
+main{
+    position: relative;
+    z-index: 2;
+}
+
+.banner::before{
+    width: 100%;
+    height: 100vh;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #0009;
+    z-index: 2;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background: url(https://www.trackschoolbus.com/wp-content/uploads/2014/11/Advantages-of-GPS-Tracking-System.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+
+
+.bannercard{
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+    position:relative;
+    z-index: 2;
+}
+
+.bannercard button{
+    padding: 15px 20px 15px 20px;
+    background: #fff;
+    border: none;
+    border-radius: 1px;
+    text-transform: uppercase;
+    outline: none;
+    box-shadow: 0 2px 5px #0009;
+    position: relative;
+    z-index: 200;
+}
+
+.bannercard button a{
+    color: #000;
+    text-decoration: none;
+}
+
+section p{
+    width: 45vw;
+}
+
+section{
+    display: flex;
+    width: 100%;
+    transition: 0.5s;
+    background: #fff;
+    
+    box-shadow: 0 0 10px #0005;
+}
+
+section .image img{
+    height: 100%;
+    width: 0;
+    object-fit: cover;
+    transition: 0.5s;
+    max-height: 100vh;
+    position: sticky;
+    top: 55px;
+    z-index: 1;
+    line-height: 0;
+}
+
+section article{
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    color: #757575;
+}
+
+section article button{
+    padding: 15px 20px 15px 20px;
+    border: none;
+    border-radius: 1px;
+    text-transform: uppercase;
+    outline: none;
+    box-shadow: 0 2px 6px #0008;
+    background: #07CFD4;
+    color: #fff;
+}
+
+.right{
+    
+    
+    
+}
+
+
+
+footer{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #8B83DB;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+
+
+   
+.mouse{
+bottom: 0;
+    width: 20vw;
+    height: 120px;
+    background: #0000;
+    position: absolute;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    position: reletive;
+    animation: colorchange 1.5s ease-in 1s infinite reverse;
+}
+.tl{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+.tl div{
+width: 2px;
+height: 30px;
+    background-color: #fff9;
+    border-radius: 1px;
+    
+}
+.mou{
+    width: 15px;
+    height: 25px;
+    border-radius: 10px;
+    border: 2px solid #fff9;
+    position: relative;
+    
+    
+}
+ 
+ .mi{
+     width: 100%;
+     height: 50px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     
+ }
+.bl{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bl div{
+    width: 2px;
+    
+    height: 30px;
+    background-color: #fff8;
+}
+.mou .line{
+    width: 15px;
+    height: 2px;
+    background-color: #fff8;
+}
+.mou .vline{
+    width: 2px;
+    height: 10px;
+    background-color: #fff8;
+    margin-left: 6.5px;
+}
+.ham{
+    width: 15vh;
+    height: 15vh;
+    position: absolute;
+    right: 0;
+}
+
+
+.ham div{
+    width: 15vh;
+    height: 15vh;
+    transform: rotate(90deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    background: linear-gradient(-45deg, #d34786, #6283b5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+@keyframes colorchange {
+    0%{ bottom: 0px; }
+    50%{ bottom: 20px;}
+    100%{ bottom: 0px; }
+}
+article button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.drop{
+    width: 250px;
+    height: 100vh;
+    background: #f5f5f5;
+    box-shadow: 0 0 10px #0009;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    z-index: 800;
+    transition: 0.5s;
+}
+
+.crossm{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    font-size: 20px;
+    color: #000;
+}
+
+
+.sectionform{
+    
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0 0 10px #0005;
+    
+}
+
+.form{
+    text-align: center;
+}
+
+.input{
+    
+    display: flex;
+    width: 100%;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.inp{
+    display: flex;
+    width: 300px;
+    height: 100%;
+    border: 2px solid #07CFD4;
+    box-shadow: 0 3px 20px #0003;
+}
+
+.inp input{
+    width: 100%;
+    border: none;
+    padding-left: 15px;
+    outline: none;
+}
+
+.inp button{
+    width: 70px;
+    border: none;
+    background: #07CFD4;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+.textform{
+    padding: 50px 50px;
+    color: #757575;
+    
+}
+
+ul li{
+    list-style: none;
+    margin-left: -40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+        </style>
+<link rel="stylesheet" type="text/css" href="adminpage.html">
+
+        
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-database.js"></script>
+
+        <script>
+
+
+
+
+
+
+
+ var firebaseConfig = {
+    apiKey: "AIzaSyB6kuzu6S9M1XeRHi5sf0sDM9yzH_uxAgA",
+    authDomain: "project-nab.firebaseapp.com",
+    databaseURL: "https://project-nab.firebaseio.com",
+    projectId: "project-nab",
+    storageBucket: "project-nab.appspot.com",
+    messagingSenderId: "105912004672",
+    appId: "1:105912004672:web:734c9468ac6197c3be6fa5"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+function send(){
+
+    var mess = document.getElementById("text").value;
+    
+    firebase.database().ref("messages/"+Date.now()).set(mess);
+
+
+document.getElementById("text").value = "";
+
+
+    alert('thank you for your suggestions!');
+
+
+    
+}
+
+
+
+
+
+
+
+
+            var vh = window.innerHeight;
+
+
+
+
+
+
+window.onscroll = function (){
+    
+    var elems = document.getElementsByClassName("img");
+    
+    for(var i = 0; i<=elems.length-1; i++){
+    
+    
+    
+    if(elems[i].getBoundingClientRect().y <= vh+100){      
+        
+        
+        elems[i].style.width = "40vw";
+        
+        
+        
+    }else {
+        
+        elems[i].style.width = "0";
+        
+    }
+        
+ 
+
+
+    }
+    
+}
+
+
+function totop(){
+    scrollTo(0, 0);
+}
+
+
+
+function openm(){
+    
+    document.getElementById("drop").style.left = "0";
+    
+}
+
+function closem(){
+    
+    document.getElementById("drop").style.left = "-300px";
+    
+}var vh = window.innerHeight;
+
+
+
+
+
+
+window.onscroll = function (){
+    
+    var elems = document.getElementsByClassName("img");
+    
+    for(var i = 0; i<=elems.length-1; i++){
+    
+    
+    
+    if(elems[i].getBoundingClientRect().y <= vh+100){      
+        
+        
+        elems[i].style.width = "40vw";
+        
+        
+        
+    }else {
+        
+        elems[i].style.width = "0";
+        
+    }
+        
+ 
+
+
+    }
+    
+}
+
+
+function totop(){
+    scrollTo(0, 0);
+}
+
+
+
+function openm(){
+    
+    document.getElementById("drop").style.left = "0";
+    
+}
+
+function closem(){
+    
+    document.getElementById("drop").style.left = "-300px";
+    
+}
+        </script>
+        
+    </head>
+    <body>
+        
+    <link rel="stylesheet" type="text/css" href="adminpage.html">
+
+      <div id="drop" class="drop">
+    
+    <div onclick="closem()" class="crossm">
+    
+    &#9587;
+        
+    </div>
+
+
+    
+    <div class="mtext">
+  
+       
+        <ul>
+            <li><a href="login.html">Login</a></li>
+
+            <li><a href="aqua.html">Home</a></li>
+            <li><a href="#onestart">Vectalia</a></li>
+            <li><a href="#start">Where we are?</a></li>
+            <li><a href="#two">Vectalia Nador</a></li>
+            <li><a href="#three">Vectalia Safi</a></li>
+             <li><a href="#form">Seggestion</a></li>
+          <li><a href="adminpage.html">Admin page</a></li>
+           
+             
+
+        </ul>
+
+        get to know more about us!
+    </div>
+        
+    </div>
+    
+
+        
+        <nav>
+            
+            <div class="logo">
+                
+                <button> 
+                    <a href="viewer.html">START TRACKING</a>
+                </button>
+               
+
+  
+            </div>
+
+
+        <div class="search" style="margin-top: 15px; margin-bottom: 0px;
+         margin-left: 0px; margin-right: 0px">
+        <input list="product" type="search" placeholder="search..." ><button>Search</button>
+        </div>
+
+
+
+           
+        </div>
+    </div>
+            <div onclick="openm()" class="icon">
+            <i class="material-icons">menu</i>
+            </div>
+            
+        </nav>
+        
+        <header>
+            
+            <div class="banner">
+            
+            <div class="bannercard">
+            
+            <h1>VECTALIA TRACKING</h1>
+            
+            <p>TRACK OUR BUS IN MOROCCO</p>
+                
+                <button>
+                <a href="#onestart">More about us</a>
+                    
+                </button>
+                
+            </div>
+            
+            
+             <div class="mouse els">
+     
+     <div>
+     
+            <div class="tl">
+                <div></div>
+            </div>
+            <div class="mi">
+            <div class="mou">
+            <div class="vline"></div>
+                <div class="line"></div>
+                
+            </div>
+            
+            </div>
+            
+            
+            <div class="bl">
+                <div></div>
+            </div>
+        
+            </div>
+        </div>  
+                
+        </div>
+                
+            </div>
+            
+        </header>
+        
+        
+        
+        <main>
+
+
+
+
+
+            <section id="onestart">
+                
+              
+                
+                <article class="right">
+                    
+                    <div class="text">
+                    
+                    <h2>
+                      Vectalia
+                    </h2>
+                    
+                    <p>
+                        We are a company operating on the markets for the operation and maintenance of urban and interurban transport networks.
+                    </p>
+                    
+                    <button>
+                    
+                    <a href="#start">FURTHER</a>
+
+                    </button>
+            
+                    </div>
+                    
+                </article>
+
+
+                  <div class="image"> 
+                
+                <img class="img" src="https://autocares.vectalia.es/wp-content/uploads/sites/3/2015/01/banner1.png"/>
+                    
+                </div>
+                
+            </section>
+            
+            
+
+
+            
+            
+            <section id="start">
+                
+                <div class="image"> 
+                
+                <img class="img" src="https://lh3.googleusercontent.com/proxy/zn-6pha4PWDXRnuHA7TYXxiq0EW5KFMiEZlgjJ_uGP0Ne6BskBEf-wr2r1E5QWZ231peTHscI7KxV1LR-sTmvHvyiDhxR9fDxLEs4ZEagDywOxBaytI"/>
+                    
+                </div>
+                
+                <article>
+                    
+                    <div class="text">
+                    
+                    <h2>
+                        Where we are?
+                    </h2>
+                    
+                    <p>
+                    We are in three different countries until now: Spain, Frensh and Morocco 
+                    </p>
+                    
+                    <button>
+                    
+                    <a href="#two">FURTHER</a>
+                   
+                    </button>           
+
+                
+                    </div>
+                    
+                </article>
+                
+            </section>
+            
+            
+            
+            
+            
+            
+            <section id="two">
+                
+                
+                
+                <article class="right">
+                
+                <div class="text">
+                    
+                    <h2>
+                    Vectalia Nador
+                    </h2>
+                    
+                    <p>
+                      Our services in Nador is started two years ago and we have improved the transportation network in this city.
+                      
+                    </p>
+                    
+                    <button>
+                    
+                    <a href="#three">
+                        
+                    FURTHER
+                    </a>
+                        
+                    </button>
+                    </div>
+                    
+                </article>
+                
+                <div class="image"> 
+                
+                <img class="img" src="https://i.ytimg.com/vi/ZAM2jSDnIUQ/hqdefault.jpg"/>
+                    
+                </div>
+                
+            </section>
+            
+            
+            
+            
+            <section id="three">
+                
+                <div class="image"> 
+                
+                <img class="img" src="https://lh3.googleusercontent.com/proxy/oTgZmTDLRldePXoxvFbQzkvS0O3oG3Gq6GLUxjYl6Lk2YVfyu1Zhq6WZs0O13SD6jupdH4it8hsv99MJsO9gtkY_GiCz7UTwDqM26Xb55nuEqXf4SxYxlILkSzAVWA"/>
+                    
+                </div>
+                
+                <article>
+                    
+                    <div class="text">
+                    <h2>
+                        Vectalia Safi
+                    </h2>
+                    
+                    <p>
+                        Our company is started a new chalange in Morocco we are now in Safi. 
+
+                    </p>
+                    
+                    <button>
+                    
+                    <a href="#form">FEEDBACK</a>
+                   
+                    </button>
+                    </div>
+                </article>
+                
+            </section>
+
+
+
+            <div id="form" class="sectionform">
+            
+            <div class="form">
+            
+            <div class="textform">
+            
+            <h2>Write your suggestions for improving the project</h2>
+                
+            </div>
+            
+            <div class="input">
+            
+            <div class="inp">
+            
+            <input type="email" id="text" placeholder="Write here"/>
+            
+            <button onclick="send()" class="sendbtn">
+                
+                <i class="material-icons">send</i>
+                
+            </button>
+            
+            </div>
+                
+            </div>
+                
+            </div>
+            
+        </div>
+        
+            
+            
+            
+        </main>
+        
+        <footer>
+
+
+        <div class="-footer">
+    <div class="-footer-bar">
+        <h6 class="-footer-content-text" style="text-align: center">Get connected with us on social networks!</h6>
+         <a href="https://mail.google.com/mail/u/0/?tab=rm#inbox" target="_blank">
+           <img width="70px" alt="Gmail" src="https://3.bp.blogspot.com/-uNEw6s-SVC4/XEBzpZCHQ9I/AAAAAAAAG70/FNQCsWZVsmY4uFqoVmxVnjPc-8DmRG-cQCK4BGAYYCw/s1600/Logo%2BGmail.png" />
+           </a>
+           <a href="https://www.facebook.com/omar.daylami">
+           <img width="70px" alt="Facebook" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"/>
+           </a>
+           <a href="https://twitter.com/omardaylami">
+           <img width="70px" alt="Twitter" src="http://culliganrecrute.fr/wp-content/uploads/2018/01/twitter-logo-1-1.png" />
+           </a>
+        <span class="-footer-content-text -icons">
+            <span class="fa fa-instagram -icons-icons" aria-hidden="true"></span>
+            <span class="fa fa-facebook -icons-icons" aria-hidden="true"></span>
+        </span>
+    </div>
+</div>
+<div class="-main-footer container-fluid">
+    <div class="-footer-content-text row">
+        
+        <div class="col-md-4">
+            <h6 class="-footer-text -footer-headings"  align="center">Order now!</h6>
+            <hr style="border: 0;border-top: 1px solid rgba(0, 0, 0, 0.5);width: 60px; color: white">
+            <p align="center" class="-footer-text-a"><span class="fa fa-phone"></span>&nbsp;[MOBILE NUMBER: +21277777514]</p>
+            <p align="center"><span class="-foter-text-b fa fa-phone"></span>&nbsp;[MOBILE NUMBER-2: +212642556845]</p>
+        </div>
+    </div>
+</div>
+<div class="-footer">
+    <div class="-footer-bar">
+        <p align="center"><a href="#top"><button class="btn btn-dark">Move to top</button></a></p>
+        <h6 align="center" style="color: #d4d4d4">© COPYRIGHT 2019 [VECTALIA CORP]. ALL RIGHTS RESERVED.</h6>
+
+</div>
+        Designed by <a href="https://www.facebook.com/omar.daylami">VECTALIA
+
+<link rel="stylesheet" type="text/css" href="adminpage.html">
+        </a>
+       
+   
+        </footer>
+        
+
+    </body>
+</html>

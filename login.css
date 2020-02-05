@@ -1,0 +1,239 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: 0.1s;
+    appearance: none;
+}
+
+body{
+    background: #fff;
+    font-family: Florence, cursive;
+    background: url('http://images.tapchianhdep.net/15-10tai-hinh-nen-dien-thoai-dep-de-thuong6.jpg');
+}
+
+header{
+   z-index: 99;
+   width: 100%;
+   height: 80px;
+   background: #0099ff;
+   position: relative;
+   border-radius: 0 0 100% 0;
+   opacity: 1;
+}
+.nen1{
+   z-index: 5;
+   position: absolute;
+   top: 54px; right: 0;
+   width: 100%;
+   height: 90px;
+   background: #11aaff;
+   border-radius: 0 0 100% 0;
+   opacity: 0.8;
+}
+
+.nen2{
+   z-index: 4;
+   position: absolute;
+   top: 54px; right: 0;
+   width: 100%;
+   height: 95px;
+   background: #0000ff;
+   border-radius: 0 0 100% 0;
+   opacity: 0.6;
+}
+.nen3{
+   z-index: 3;
+   position: absolute;
+   top: 54px; right: 0;
+   width: 100%;
+   height: 100px;
+   background: #aa99ff;
+   border-radius: 0 0 100% 0;
+   opacity: 0.4;
+}
+.nen4{
+   z-index: 2;
+   position: absolute;   top: 54px; right: 0;
+   width: 100%;
+   height: 105px;
+   background: #55ff00;
+   opacity: 0.2;
+   border-radius: 0 0 100% 0;
+}
+
+
+header .top{
+   background: #0099ff;
+   position: fixed;
+   top: 0%;
+   left: 0%;
+   width: 100%;
+   height: 55px;
+   box-shadow:  0px 1px 10px #0099ff;
+}
+header .top .form{
+    width: 95%;
+    height: 40px;
+    position: relative;
+    margin: 2.5% auto;
+}
+header .top input{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   border: none;
+   border-radius: 20px;
+   background: rgba(255,255,255,0.5);
+   padding: 0 40px 0 15px;
+   color: #fff;
+   font-size: 15px;
+   font-weight: 500;
+   outline: none;
+   appearance: none;
+   
+}
+header .top ::-webkit-input-placeholder { 
+color: #fff;
+} 
+header .top #btn{
+   width: 40px;
+   height: 40px;
+   position: absolute;
+   top: 0;
+   right: 0;
+   border: none;
+   border-radius: 20px;
+   background: rgba(255,255,255,1);
+   color: #0099ff;
+   font-size: 12.5px;
+   font-weight: 900;
+   outline: none;
+   appearance: none;
+   
+}
+header h1{
+   text-align: center;
+   margin: 54px auto 0 auto;
+   color: white;
+   font-weight: 900;
+   text-shadow:  1px 1px 1px #fff;
+   
+}
+
+section{
+   z-index: 7;
+   width: 100%; 
+   height: auto;
+   text-align: center;
+   margin: 0;
+}
+section .sign{
+   z-index: 10;
+   width: 100%;
+   position: relative;
+   margin: 50px 0 0 0;
+}
+section .sign input{
+   width: 90%;
+   height: 40px;
+   display: block;
+   margin: 25px auto;
+   background: #fff;
+   border: solid 1px #0099ff;
+   border-radius: 5px;
+   padding: 5px;
+   color: #999;
+   font-weight: 500;
+   outline: none;
+   appearance: none;
+}
+section .sign ::-webkit-input-placeholder { 
+color: #0099ff;
+} 
+section .sign input:focus{
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   border-bottom: solid 3px #ff0000;
+   background: rgba(255,255,255,0.25);
+   border-radius: 0;
+   color: #0099ff;
+   font-size: 18px;
+   width: 90%;
+}
+
+
+section .sign #login{
+   width: 90%;
+   height: 40px;
+   display: block;
+   margin: 20px auto;
+   background: #ff9900;
+   color: rgba(255,255,255,1);
+   border: none;
+   outline: none;
+   border-radius: 30px;
+   font-size: 16px;
+   font-weight: 500;
+   outline: none;
+   appearance: none;
+}
+section .sign #login:hover{
+    background: #0099ff;
+   color: #fff;
+   font-weight: 900;
+}
+section .sign #login:fucus{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+section .link{
+    overflow: hidden;
+   width: 100%;
+   height: 80px;
+   position: relative;
+}
+
+section .link #fb, #g {
+   margin-bottom: 10px;
+   width: 45%;
+   height: 40px;
+   border: none;
+   outline: none;
+   border-radius: 10px;
+   font-size: 10px;
+   color: #fff;
+   outline: none;
+   appearance: none;
+   margin: 20px auto;
+}
+section .link #fb{
+   background: #009999; 
+}
+section .link #g{
+   background: #990000; 
+}
+
+section .link #fb:hover{
+   background: #55ff77; 
+   color: #fff;
+   font-weight: 500;
+}
+section .link #g:hover{
+   background: #ff0000;
+   color: #fff;
+   font-weight: 500;
+}
+section .link #fb:focus {
+    width: 90%;
+}
+section .link #g:focus {
+    position: absolute;
+    top: 0;
+    left:5%;
+    width: 90%;
+}
